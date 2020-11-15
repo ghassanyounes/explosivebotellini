@@ -1,0 +1,22 @@
+{
+  "name": "explosivebotellini",
+  "version": "1.0.0",
+  "description": "My Discord Bot (ExplosiveTortellini)",
+  "main": "bot.js",
+  "scripts": {
+    "test": "testme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghassanyounes/explosivebotellini.git"
+  },
+  "author": "Ghassan Younes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghassanyounes/explosivebotellini/issues"
+  },
+  "homepage": "https://github.com/ghassanyounes/explosivebotellini#readme",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
+}
