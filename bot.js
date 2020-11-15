@@ -33,13 +33,12 @@ function gotMessage(msg) {
     msg.reply('hongri 🍝');
   }
   if (/*msg.channel.id == 'CHANNEL_ID_HERE &&*/ msg.content === 'kuzco') {
-    //msg.reply(' YOU RUINED MY GROOVE!');
     const index = Math.floor(Math.random() * kuzco_replies.length);
     msg.channel.send(kuzco_replies[index]);
   }
   if (msg.content === 'pull the lever kronk') {
     msg.channel.send('http://25.media.tumblr.com/tumblr_lsxk1ndn7W1r2vs7so2_r1_250.gif');
-  } else if (/*msg.channel.id == 'CHANNEL_ID_HERE &&*/ msg.content === 'kuzco') {
+  } else if (msg.content === 'kronk') {
     const index = Math.floor(Math.random() * kronk_replies.length);
     msg.channel.send(kuzco_replies[index]);
   }
