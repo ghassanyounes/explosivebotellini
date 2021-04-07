@@ -88,6 +88,16 @@ const bees = ['According to all known laws of aviation, there is no way that a b
 'Camera moves into the back room. ANGLE ON: Barry. ANGLE ON: Barry\'s COW CLIENT. COW Milk, cream, cheese...it\'s all me. And I don\'t see a nickel. BARRY Uh huh? Uh huh? COW (breaking down) Sometimes I just feel like a piece of meat. BARRY I had no idea. VANESSA Barry? I\'m sorry, have you got a moment? BARRY Would you excuse me? My mosquito associate here will be able to help you. Mooseblood ENTERS. MOOSEBLOOD Sorry I\'m late. COW He\'s a lawyer too? MOOSEBLOOD Ma\'am, I was already a bloodsucking parasite. All I needed was * a briefcase. * ANGLE ON: Flower Counter. VANESSA (to customer) Have a great afternoon! (to Barry) Barry, I just got this huge tulip order for a wedding, and I can\'t get them anywhere.  BARRY Not a problem, Vannie. Just leave it to me. Vanessa turns back to deal with a customer. VANESSA You\'re a life-saver, Barry. (to the next customer) Can I help who\'s next? Who\'s next? ANGLE ON: Vanessa smiling back at Barry. Barry smiles too, then snaps himself out of it. BARRY (speaks into his antennae) Alright. Scramble jocks, it\'s time to fly! VANESSA Thank you, Barry! EXT. FLOWER SHOP - CONTINUOUS ANGLE ON: Ken and Andy walking down the street. KEN (noticing the new sign) Augh! What in the world? It\'s that bee again! ANDY (guiding Ken protectively) Let it go, Kenny. KEN That bee is living my life! When will this nightmare end? ANDY Let it all go. They don\'t break stride. ANGLE ON: Camera in front of Barry as he flies out the door and up into the sky. Pollen jocks fold in formation behind him as they zoom into the park. BARRY (to Splitz) Beautiful day to fly.  JACKSON Sure is. BARRY Between you and me, I was dying to get out of that office. FADE OUT:'
 ];
 
+const cabbages = ['https://64.media.tumblr.com/1874b4a28a68c464791e8717334eceab/e35c5f9d94489525-59/s500x750/c09b36c223c4ef29c59e3b73abe441ec14272cd4.gifv',
+'http://38.media.tumblr.com/23dc87b94b71c72994b6f48979d5e4b7/tumblr_n5kyvimrtw1rd8y4ao10_500.gif',
+'http://25.media.tumblr.com/tumblr_ln0jzpylyM1qdmlfso1_500.gif',
+'http://2.bp.blogspot.com/-wiCe0HVsZpo/UeGEoVUjOAI/AAAAAAAAAaI/voMvqn-PVI4/s1600/cabbage+merchant.gif',
+'https://66.media.tumblr.com/41e0e8f69e65915366f520d264fd7b83/tumblr_op015heOm71uwhtt4o2_500.gif'
+];
+
+const safe_cabbages = ['http://media.tumblr.com/3859c0e0d579f01613cb147edec801fe/tumblr_inline_nb0fomeesQ1qgg6hy.gif',
+'https://media1.tenor.com/images/48a93d08a7017adb85da6524a798d9d1/tenor.gif?itemid=11374215',];
+
 const beelength = bees.length;
 var bee_index = 0;
 
@@ -135,7 +145,7 @@ async function gotMessage(msg) {
 
       msg.channel.send(gif_json.results[index].url);
       //msg.channel.send(gif_json.results[0].url)
-    }else if (msg_lower.indexOf('kuzco') > -1) {
+    } else if (msg_lower.indexOf('kuzco') > -1) {
       const index = Math.floor(Math.random() * kuzco_replies.length);
       msg.channel.send(kuzco_replies[index]);
     } else if (msg_lower === 'pull the lever kronk') {
@@ -145,6 +155,12 @@ async function gotMessage(msg) {
       msg.channel.send(kronk_replies[index]);
     } else if (msg_lower.indexOf('dab') > -1) {
       msg.channel.send('https://c.tenor.com/c5Pm-hAl_oUAAAAM/betty-white-dab.gif');
+    }  else if (msg_lower.indexOf('avatar') > -1) {
+      const index = Math.floor(Math.random() * cabbages.length);
+      msg.channel.send(cabbages[index]);
+    } else if (msg_lower.indexOf('cabbage') > -1) {
+      const index = Math.floor(Math.random() * safe_cabbages.length);
+      msg.channel.send(safe_cabbages[index]);
     } else if (msg_lower.indexOf('bees') > -1) {
       if (bee_index == beelength)
         bee_index = 0;
